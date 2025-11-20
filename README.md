@@ -46,7 +46,7 @@ The user enters a city name → the request goes to Lambda → Lambda sends API 
 
 User → S3 Website → API Gateway → Lambda → OpenWeatherMap API → Response to UI
 
-(Add your architecture image here)
+
 
 
 ---
@@ -80,7 +80,6 @@ Backend using Node.js Lambda
   style.css
 
 /screenshots
-  (All AWS console screenshots)
 
 
 ---
