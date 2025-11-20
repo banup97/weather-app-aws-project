@@ -1,0 +1,7 @@
+body { font-family: Arial, sans-serif; padding:20px; background:#f7fafc; }
+.container { max-width:800px; margin:0 auto; }
+h1 { text-align:center; }
+.search { display:flex; gap:8px; margin-bottom:16px; }
+input { flex:1; padding:8px; font-size:16px; }
+button { padding:8px 12px; font-size:16px; cursor:pointer; }
+.card { background:white; padding:12px; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.06); margin-bottom:12px; }
