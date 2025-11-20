@@ -46,7 +46,36 @@ The user enters a city name → the request goes to Lambda → Lambda sends API 
 
 User → S3 Website → API Gateway → Lambda → OpenWeatherMap API → Response to UI
 
-
+┌────────────────────────┐
+                   │        User Browser     │
+                   │ (Weather Dashboard UI)  │
+                   └─────────────┬───────────┘
+                                 │  (HTTPS)
+                                 ▼
+                   ┌────────────────────────┐
+                   │         S3 Bucket       │
+                   │  Static Website Hosting │
+                   │  (index.html, JS, CSS)  │
+                   └─────────────┬───────────┘
+                                 │  Fetch API
+                                 ▼
+                   ┌────────────────────────┐
+                   │      API Gateway        │
+                   │   HTTP GET /weather     │
+                   └─────────────┬───────────┘
+                                 │ Triggers
+                                 ▼
+                   ┌────────────────────────┐
+                   │        Lambda           │
+                   │  Fetch from OpenWeather │
+                   │   + Process JSON Data   │
+                   └─────────────┬───────────┘
+                                 │
+                                 ▼
+                   ┌────────────────────────┐
+                   │   OpenWeatherMap API    │
+                   │ Return Real-time Weather│
+                   └─────────────────────────┘
 
 
 ---
